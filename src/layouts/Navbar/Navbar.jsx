@@ -1,22 +1,25 @@
 import Logo from "./Logo";
-import AOS from 'aos';
+import AOS from "aos";
 import "aos/dist/aos.css";
-import '../../App.css';
-import { useEffect } from "react";
-// import { Link } from "react-router";
+import "../../App.css";
+import { useEffect, useState } from "react";
+import Button from "../../shared/components/Button";
 import { Link } from "react-router-dom";
 import NavMenu from "./NavMenu";
+import { MENU } from "../../config/navigation/menu.config";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
-useEffect( ()=>{
-   AOS.init({
-    duration: 1000,
-    once : true,
-    easing : "ease-out-cubic",
-    offset : 120
-   })
-}, [])
+  const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-out-cubic",
+      offset: 120,
+    });
+  }, []);
 
   return (
     <>
@@ -29,15 +32,35 @@ useEffect( ()=>{
             <Link to="/" data-aos="fade-center" data-aos-delay="100">
               <Logo />
             </Link>
-              <NavMenu className={"lg:flex hidden"} />
+            <NavMenu className={"lg:flex hidden"} />
           </div>
           <div className="lg:centered-row gap-10 hidden">
-            <p className="text-white text-2xl font-barlow! font-medium
-            tracking-wide" data-aos="fade-center" data-aos-delay="500">
+            <p
+              className="text-white text-2xl font-barlow! font-medium
+            tracking-wide"
+              data-aos="fade-center"
+              data-aos-delay="500"
+            >
               +234 7059803461
             </p>
+
+            <Button type="link" to="/contact" text={"Get A Quote"}
+             className="btn-yellow" data-aos="fade-center"
+             data-aos-delay="600"
+            />
+          </div>
+
+          <div className="text-white block lg:hidden cursor-pointer" 
+             onClick={() => setOpen(!open)}
+          >
+            ☰
           </div>
         </nav>
+
+        <ul className={`block lg:hidden overflow-hidden transition-all
+           duration-500 bg-black ${open ? "max-h-125 opacity-100" : "max-h-0 opacity-0"}`}>
+          <MobileMenu className={`block lg:hidden`} />
+        </ul>
       </div>
     </>
   );
