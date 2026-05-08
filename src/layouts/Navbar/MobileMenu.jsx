@@ -27,6 +27,7 @@ const MobileMenu = () => {
             {item.type === "dropdown" && (
                 <span className={`transition-transform duration-300 
                 ${active === item.id ? "rotate-180" : ""}`}>
+                  <ChevronDown size={20} />
                 </span>
             )}
           </div>
