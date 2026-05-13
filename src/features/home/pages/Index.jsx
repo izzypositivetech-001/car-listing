@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import Hero from '../components/Hero/Hero'
 import About from "../components/About/About";
+import Service from "../components/Service/Service";
 
 const Index = () => {
 
