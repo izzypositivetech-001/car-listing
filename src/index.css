@@ -31,3 +31,20 @@
     background-size: cover;
     background-position: center;
 }
+
+.scroll-top-car-btn::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 2px;
+    width: 76px;
+    height: 76px;
+    background: url(../src/assets/images/car-focus.png) no-repeat center center;
+    background-size: contain;
+    transition: .2s;
+    opacity: 0;
+}
+
+.scroll-top-car-btn:hover::before {
+    opacity: 1;
+}

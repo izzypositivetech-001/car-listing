@@ -21,6 +21,7 @@ const Index = () => {
     <>
        <Hero />
        <About />
+       <Service />
     </>
   )
 }

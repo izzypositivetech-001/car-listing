@@ -12,6 +12,17 @@ import MobileMenu from "./MobileMenu";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect( () => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  },[])
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -25,7 +36,7 @@ const Navbar = () => {
     <>
       <div
         className={`fixed top-0 left-0 right-0 w-full z-999 border-b 
-        border-gray-50/10 transition-all duration-300 bg-black`}
+        border-gray-50/10 transition-all duration-300 ${scrolled ? "bg-black shadow-lg" : "bg-transparent shadow-none"}`}
       >
         <nav className="relative container mx-auto px-4 py-5 centered-row justify-between">
           <div className="centered-row gap-10 relative">
@@ -58,7 +69,7 @@ const Navbar = () => {
         </nav>
 
         <ul className={`block lg:hidden overflow-hidden transition-all
-           duration-500 bg-black ${open ? "max-h-125 opacity-100" : "max-h-0 opacity-0"}`}>
+           duration-500 bg-black ${open ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}>
           <MobileMenu className={`block lg:hidden`} />
         </ul>
       </div>

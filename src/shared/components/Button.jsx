@@ -11,7 +11,7 @@ const Button = ({
 }) => {
 
     const baseClass = 
-    "px-3 sm:px-5 md:px-8 py-3 w-40 sm:w-45 md:w-50 uppercase font-barlow font-medium tracking-wide cursor-pointer inline-block text-center "
+    "px-5 md:px-8 py-3 min-w-[180px] w-fit uppercase font-barlow font-medium tracking-wide cursor-pointer inline-block text-center "
      
     if (type === "link") {
         return (

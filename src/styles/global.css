@@ -11,6 +11,10 @@
     --font-barlow: "Barlow Condensed", sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: "DM Sans", "Montserrat", sans-serif;
     text-decoration: none;
@@ -91,11 +95,11 @@ p {
     }
 
     .heading-1 {
-        @apply text-4xl sm:text-5xl uppercase! font-bold tracking-wide;
+        @apply text-3xl sm:text-4xl md:text-5xl uppercase! font-bold tracking-wide;
     }
 
     .heading-2 {
-        @apply text-4xl sm:text-4xl uppercase! font-bold tracking-wide;
+        @apply text-3xl sm:text-4xl uppercase! font-bold tracking-wide;
     }
 
     .btn-yellow {

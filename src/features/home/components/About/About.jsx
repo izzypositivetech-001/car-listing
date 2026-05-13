@@ -35,8 +35,8 @@ const About = () => {
                             We provide premium car rental services with a diverse fleet of well-maintained vehicles. From economy cars to luxury SUVs, we have the perfect vehicle for every occasion. 
                           </p>
 
-                          <ul className="space-y-3 sm:space-y-5 w-full">
-                            <li className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full"  data-aos="fade-left"
+                          <ul className="space-y-5">
+                            <li className="centered-row flex-wrap gap-5"  data-aos="fade-left"
                           data-aos-delay="300">
                             <div className="icon w-20 h-20">
                                 <img src={icon1} alt="car-image" className="section-image p-3" />
@@ -44,16 +44,16 @@ const About = () => {
 
                             <div className="content">
                                 <span className="font-semibold text-xl tracking-wide pb-2 block">
-                                    Brake Check & Services
+                     Brake Check & Services
                                 </span>
-                                <p className="max-w-full sm:max-w-80 text-gray-light text-sm">
+                                <p className="max-w-80 text-gray-light text-sm">
                                     Complete brake system inspection and maintenance to ensure your vehicle safety.
                                 </p>
                                 
                             </div>
                           </li>
 
-                          <li className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full"  data-aos="fade-left"
+                          <li className="centered-row flex-wrap gap-5"  data-aos="fade-left"
                           data-aos-delay="300">
                             <div className="icon w-20 h-20">
                                 <img src={icon2} alt="car-image" className="section-image p-3" />
@@ -63,7 +63,7 @@ const About = () => {
                                 <span className="font-semibold text-xl tracking-wide pb-2 block">
                                     Online Appointment
                                 </span>
-                                <p className="max-w-full sm:max-w-80 text-gray-light text-sm">
+                                <p className="max-w-80 text-gray-light text-sm">
                                     Book your vehicle rental reservation easily online with instant confirmation and flexible scheduling.
                                 </p>
                                 
