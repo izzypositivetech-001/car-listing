@@ -237,7 +237,66 @@ const ServiceDetails = () => {
                             
                     />
                 </div>
+
+                <div className="input-wrapper pb-2 relative" 
+                 data-aos="fade-center"
+                 data-aos-delay="700"
+                >
+                    <label className="flex-grow w-full block mb-2 font-medium">Email</label>
+                    <input
+                        type="text"
+                        name="email"
+                        placeholder="Enter Email"
+                        className="input-box w-full outline-none"
+                        required
+                            
+                    />
+                </div>
+
+                <div className="input-wrapper pb-2 relative" 
+                 data-aos="fade-center"
+                 data-aos-delay="800"
+                >
+                    <label className="flex-grow w-full block mb-2 font-medium">Message</label>
+                    <textarea
+                        type="text"
+                        name="message"
+                        placeholder="Enter Message"
+                        className="input-box w-full outline-none"
+                        required
+                        rows={4}
+                            
+                    />
+                </div>
+
+                <Button
+                  type="submit"
+                  text={"Send Message"}
+                  className="w-full! btn-black mt-0"
+                  aos="fade-center"
+                  aosDelay="900"
+                />
             </form>
+
+            <div className="contact-info">
+                <h3 className="text-2xl font-medium tracking-wide pt-8 pb-8">
+                    <ul className="space-y-6 max-w-md">
+                        <li className="flex items-start gap-4 group contact-item"
+                           data-aos="fade-center"
+                           data-aos-delay="700"
+                        >
+                            <div className="p-3 rounded-full bg-linear-to-r from-purple-500 
+                            to-pink-500 text-white transition-transform duration-300 group-hover">
+                                <MapPin size={20} />
+                            </div>
+
+                            <p className="text-gray-700">
+                                <span className="font-semibold block">United Kingdom  -</span> 221B Baker Street,<br />London, NW1 6XE  
+                            </p>
+                        </li>
+                    </ul>
+                </h3>
+            </div>
         </div>
       </div>
     </>
