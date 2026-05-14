@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom"
 import Index from "../features/home/pages/Index"
+import ServiceDetails from "../features/home/pages/ServiceDetails"
 import { useEffect } from "react";
 import AOS from "aos";
 
@@ -24,6 +25,7 @@ const MainRoutes = () => {
   return (
     <Routes>
         <Route path="/" element={<Index />}></Route>
+        <Route path="/services/:id" element={<ServiceDetails />}></Route>
     </Routes>
   )
 }
